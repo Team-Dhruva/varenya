@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varenya Thaker | Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #666666;
+            --accent: #6366f1;
+            --accent-dark: #4f46e5;
+            --background: #fafafa;
+            --card-bg: #ffffff;
+            --gradient-start: #6366f1;
+            --gradient-end: #8b5cf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-radius: 30px;
+            margin: -2rem -2rem 0 -2rem;
+        }
+
+        .hero {
+            max-width: 800px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .accent-text {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.1);
+            border-color: var(--accent);
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .hobbies-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .hobby-item {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .hobby-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.1);
+            border-color: var(--accent);
+        }
+
+        .hobby-item i {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        .hobby-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .contact {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-radius: 30px;
+            padding: 4rem 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--primary);
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            padding: 1rem;
+            background: var(--card-bg);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.1);
+            border-color: var(--accent);
+        }
+
+        .about-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: var(--secondary);
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+
+            .skill-card, .hobby-item {
+                padding: 2rem;
+            }
+
+            .social-links a {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="hero">
+                <h1>Varenya Thaker</h1>
+                <p>Computer Scientist & <span class="accent-text">Innovation Explorer</span></p>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                I'm a forward-thinking computer scientist passionate about pushing the boundaries of technology. 
+                With a blend of technical expertise and creative problem-solving, I transform complex challenges into 
+                elegant, efficient solutions that make a meaningful impact.
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">What I Do</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Software Development</h3>
+                    <p>Crafting clean, efficient, and scalable applications using cutting-edge technologies and industry best practices.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Algorithm Design</h3>
+                    <p>Developing sophisticated algorithms to tackle complex computational challenges with optimal performance.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Analysis</h3>
+                    <p>Transforming raw data into actionable insights through advanced analytics and visualization techniques.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies">
+            <h2 class="section-title">Hobbies & Interests</h2>
+            <div class="hobbies-list">
+                <div class="hobby-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Coding</h3>
+                    <p>Exploring emerging technologies and contributing to open-source projects</p>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-book"></i>
+                    <h3>Reading</h3>
+                    <p>Diving into tech literature, scientific research, and innovative concepts</p>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Problem Solving</h3>
+                    <p>Engaging with complex puzzles and computational challenges</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get in Touch</h2>
+            <p>Let's collaborate on something amazing</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:contact@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
